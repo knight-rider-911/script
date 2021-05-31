@@ -15,7 +15,7 @@ oldIFS=$IFS
 check_user() {
 i=1
 while cut -d: -f1 /etc/passwd | grep ^$user$ > /dev/null
-do
+do 
    user=$user$i
    ((i++))
 done
@@ -32,7 +32,7 @@ groupadd $group
 if [ "$group" = it ] || [ "$group" = security ]
 then
   if ! grep "%$group" /etc/sudoers
-    then
+    then 
     cp /etc/sudoers{,.bkp}
     echo '%'$group' ALL=(ALL) ALL' >> /etc/sudoers
   fi
@@ -40,7 +40,7 @@ then
 elif [ "$user" = admin ]
 then
   if ! grep "$user" /etc/sudoers
-    then
+    then 
     cp /etc/sudoers{,.bkp}
     echo $user' ALL=(ALL) ALL' >> /etc/sudoers
   fi
@@ -88,4 +88,5 @@ else
   done
 
 fi
+
 
