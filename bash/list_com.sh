@@ -99,4 +99,12 @@ sudo mdadm --create myraid1 --level=1 --raid-devices=2 /dev/sdb1 /dev/sdc1
 
 libreoffice --headless --convert-to csv users.xlsx
 echo Hello World | tr o O
-#bash scripting
+
+sudo vim /etc/default/grub
+sudo grub2-mkconfig
+sudo grub2-mkconfig | sudo tee /boot/grub2/grub.cfg
+cat /lib/modules/$(uname -r)/modules.buitin | grep virtio
+sudo lsinitrd /boot/initramfs-$(uname -r).img | grep virtio
+systemctl get-default
+systemctl list-dependencies graphical.target
+sudo systemctl set-default multi-user.target
