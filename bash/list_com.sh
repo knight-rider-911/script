@@ -110,3 +110,26 @@ systemctl list-dependencies graphical.target
 sudo systemctl set-default multi-user.target
 sudo systemctl reload sshd # reload without reboot
 sudo systemctl mask/unmask sshd #hard disable
+ls -l /dev/log
+systemd-journald
+systemctl status rsyslog
+sudo tail /var/log/messages
+sudo vim /etc/rsyslog.conf
+sudo vim /etc/systemd/journald.conf
+getfacl user-1000.journal
+logrotate
+sudo vim /etc/logrotate.conf
+logger -p news.alert Hello World
+at
+at -l
+atq
+at -c
+atrm
+at -r
+batch # execute after decrease load average low 0.8
+vim /etc/crontab
+crontab -l
+anacron
+sudo cat  /var/spool/cron/user
+sudo list-timers
+systemd-run --on-calendar
