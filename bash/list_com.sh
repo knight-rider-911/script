@@ -133,3 +133,11 @@ anacron
 sudo cat  /var/spool/cron/user
 sudo list-timers
 systemd-run --on-calendar
+sudo du -sh /boot/* | sort -h | tail -3
+find /home/knight -type d | wc -l
+sudo find / -user root -type f - perm /u=s -exec ls -l{}\; 2>/dev/null
+tar -cf /user.tar /home/knight
+gzip -k user.tar
+bzip2 -k user.tar
+tar -czf /tmp/gzipped.tar.gz -C /home/knight/
+tar -xf  gzipped.tar.gz -C restore
