@@ -141,3 +141,8 @@ gzip -k user.tar
 bzip2 -k user.tar
 tar -czf /tmp/gzipped.tar.gz -C /home/knight/
 tar -xf  gzipped.tar.gz -C restore
+tar -czf pictures.tar.gz -g pictures.snar -C Pictures/ . #create arch with metadata
+#VDO technology
+cd /etc/systemd/system/
+systemctl list-units --type mount
+sudo systemctl daemon-reload
