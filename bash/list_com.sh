@@ -146,3 +146,11 @@ tar -czf pictures.tar.gz -g pictures.snar -C Pictures/ . #create arch with metad
 cd /etc/systemd/system/
 systemctl list-units --type mount
 sudo systemctl daemon-reload
+#43
+sudo ip link set enp0s3 down
+sudo ip link set enp0s3 up
+ping _gateway
+ip ro sh
+traceroute
+cat /etc/resolv.conf
+nslookup ya.ru
