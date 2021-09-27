@@ -154,3 +154,22 @@ ip ro sh
 traceroute
 cat /etc/resolv.conf
 nslookup ya.ru
+ldd /usr/bin/ssh
+rpm2cpio <name rpm package> | cpio -idmv
+rpm -qp --scripts <name rpm package>
+rpm -qip <name rpm package>
+dnf deplist <name package>
+rpm -qa
+epel-modular
+dnf repolist BaseOS -v
+dnf info httpd
+systemctl status dnf-makecache.timer
+systemctl cat dnf-makecache.timer
+sudo dnf config-manager --add-repo
+sudo dnf needs-restarting -r
+sudo dnf provides nslookup
+sudo dnf grouplist
+sudo dnf module list
+sudo dnf info <module:version>
+sudo dnf history
+VirtualBOx
