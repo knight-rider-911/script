@@ -1,8 +1,24 @@
-#sudo dnf install kernel-devel
+#!/usr/bin/env bash
+
+release=$(lsb_release -a | grep Distributor|cut -f2-)
+echo $release
+#Debian/Ubuntu
+#add key
+if [ "$release" = Ubuntu ] || [ "$release" = Debian ]
+then
+  echo""
+  #install prerequimentes
+elif [ "$release" = Centos ] || [ "$release" = Fedora ]
+then
+  dnf check-update
+  #install prerequimentes
+  sudo dnf install kernel-devel
+
+fi
 
 if [ -e ~/Downloads ]; then
   echo "Directory exist!"
-else mkdir ~/Downloads
+else mkdir -p ~/Downloads
 fi
 
 cd  ~/Downloads

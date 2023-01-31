@@ -1,6 +1,4 @@
-#Add virtualbox repository
-cd /etc/yum.repos.d/
-wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+
 
 #Output info about used files
 sudo  lsof -w /vm

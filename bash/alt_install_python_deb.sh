@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 #https://linuxize.com/post/how-to-install-python-3-9-on-debian-10/
 
 sudo apt update
