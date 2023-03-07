@@ -25,5 +25,6 @@ cd  ~/Downloads
 rm -rf ~/Downloads/RTL88x2BU-Linux-Driver/
 git clone https://github.com/RinCat/RTL88x2BU-Linux-Driver.git
 cd RTL88x2BU-Linux-Driver/
+
 make
 sudo make install
