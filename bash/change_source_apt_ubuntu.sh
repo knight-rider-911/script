@@ -8,12 +8,14 @@ do  case $option in
         sudo rm -f /etc/apt/sources.list
 	      sudo cp /etc/apt/list.local /etc/apt/sources.list
 	      sudo cat /etc/apt/sources.list
+	      sudo apt update
 	      break
 	      ;;
     "Use global repositories")
         sudo rm -f /etc/apt/sources.list
         sudo cp /etc/apt/list.global /etc/apt/sources.list
         sudo cat /etc/apt/sources.list
+        sudo apt update
         break
 		    ;;
 	 "Exit")
