@@ -174,6 +174,7 @@ sudo dnf info <module:version>
 sudo dnf history
 VirtualBOx
 
+shred
 finger
 whatis
 cmp
