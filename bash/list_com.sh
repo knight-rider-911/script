@@ -173,3 +173,8 @@ sudo dnf module list
 sudo dnf info <module:version>
 sudo dnf history
 VirtualBOx
+
+finger
+whatis
+cmp
+resolvectl status
