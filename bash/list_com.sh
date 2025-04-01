@@ -179,3 +179,4 @@ finger
 whatis
 cmp
 resolvectl status
+cat $HOME/.config/mc/ini
